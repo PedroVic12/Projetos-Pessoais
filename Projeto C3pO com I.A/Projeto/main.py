@@ -1,6 +1,5 @@
 import speech_recognition as c3po
 import os
-
 """
 TODO - Criar classes e diagramas uml
 
@@ -21,22 +20,24 @@ TODO - Criar classes e diagramas uml
 - passar tudo para o ambiente virtual
 """
 
-#Função para ouvir e reconhecer a fala
+# Função para ouvir e reconhecer a fala
+
+
 def ouvir_microfone():
 
-    #Habilita o microfone do usuário
+    # Habilita o microfone do usuário
     microfone = c3po.Recognizer()
 
-    #Usando o microfone
+    # Usando o microfone
     with c3po.Microphone() as source:
 
-        #Chama um algorítimo de redução de ruídos no som
+        # Chama um algorítimo de redução de ruídos no som
         microfone.adjust_for_ambient_noise(source)
 
         print('Diga alguma coisa :) -> ')
 
         audio = microfone.listen(source)
-    
+
     try:
 
         frase = microfone.recognize_google(audio, language="pt-BR")
@@ -54,5 +55,6 @@ def ouvir_microfone():
     except c3po.UnknownValueError:
         print('Não entendi, mestre.')
         return frase
+
 
 ouvir_microfone()
