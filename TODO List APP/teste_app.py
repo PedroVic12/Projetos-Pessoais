@@ -5,8 +5,9 @@ from kivy.lang import Builder
 # from datetime import Datetime
 # print(Datetime.today())
 """
-20 Exercicios de Calculo 2
-5 Exercicios de Python + 5 C++ + 1 Projetinho do Arduino
+- 20 Exercícios de Calculo 2
+- 5 Exercícios de Python + 5 C++
+- Projeto Arduino + Video manual do mundo
 """
 
 

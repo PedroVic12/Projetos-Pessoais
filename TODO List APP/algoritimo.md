@@ -1,9 +1,3 @@
-## -> Metodos de estudo
-    - 20 Exercicios de Calculo 2
-    - 5 Exercicios de Python
-    - 5 C++
-    - 1 Projetinho do Arduino
-
 ## -> Pomodoro timer
 
 ## -> Metrologia do dia
