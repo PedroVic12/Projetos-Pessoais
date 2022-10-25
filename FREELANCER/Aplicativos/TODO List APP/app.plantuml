@@ -1,0 +1,22 @@
+@startuml APPLICATION
+class AppToDOList{
+    +String Teste 
+
+    tocarLofi()
+
+}
+
+class Pomodoro{
+
+
+
+ }
+ 
+class Youtube{
+
+}
+
+class MapaMental{
+    
+}
+@enduml
