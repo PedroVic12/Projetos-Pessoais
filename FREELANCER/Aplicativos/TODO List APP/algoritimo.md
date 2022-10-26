@@ -1,6 +1,6 @@
 # -> Pomodoro timer
 
-##2 Matérias de Manha e 2 Matérias a tarde
+## Matérias de Manha e 2 Matérias a tarde
 
 - 2h para cada tarefa (2 Pomodoro)
 - Faculdade + FreeLancer
