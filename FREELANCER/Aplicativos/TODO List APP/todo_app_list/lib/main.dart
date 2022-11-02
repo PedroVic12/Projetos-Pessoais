@@ -1,56 +1,103 @@
-import 'package:flutter/material.dart';
-//import 'package:todo_app_list/constants/colors.dart';
+// ignore_for_file: avoid_unnecessary_containers, avoid_print, use_key_in_widget_constructors
 
-//Programa Principal
+import 'package:flutter/material.dart';
+
 void main() {
   runApp(const MyApp());
 }
 
-//Constantes
-const Color tdRed = Color(0xFFDA4040);
-const Color tdBlue = Color(0XFF5F52EE);
+//! Class App principal
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-const Color tdBlack = Color(0XFF3A3A3A);
-const Color tdGrey = Color(0xFF717171);
-
-const Color tdBGColor = Color(0xFFEEEFF5);
-
-//Pagina Home
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
-
+  //Método Construtor de um widget stateless
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: cabecalho(), body: const Text('This is home screen'));
-  }
-
-  AppBar cabecalho() {
-    var appBar = AppBar(
-      backgroundColor: tdBGColor,
-      elevation: 0,
-      title: Row(mainAxisAligmnet: MainAxisAlignment.spaceBetween, children: [
-        Icon(Icons.menu, color: tdBlack, size: 30),
-      ]),
-      Container(
-        height: 40,
-        width: 40,
-      ),
+    //Criando a interface
+    return MaterialApp(
+      title: 'Meu TODO list',
+      home: MyHome(),
     );
-    return appBar;
   }
 }
 
-//Aplicativo
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+//!página Home
+class MyHome extends StatefulWidget {
+  //Método Construtor de um widget Stateful
+  @override
+  State<StatefulWidget> createState() {
+    return MyHomeState();
+  }
+}
 
+//!Layout(css) do MyHome
+class MyHomeState extends State<MyHome> {
+  final TextEditingController taskController = TextEditingController();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final List<String> _tasks = [];
+
+  //Construtor do widget
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Minha TODO List APP',
-      home: Home(),
-    );
+    //Scaffold é um layout pronto da google
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Meu TODO List'),
+        ),
+        body: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: Column(
+            children: <Widget>[
+              Container(
+                margin: const EdgeInsets.only(bottom: 20),
+                child: Form(
+                  key: _formKey,
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: TextFormField(
+                          controller: taskController,
+                          style: const TextStyle(
+                              fontSize: 32, color: Colors.black87),
+                          decoration: const InputDecoration(
+                              hintText: "Digite uma Tarefa",
+                              hintStyle: TextStyle(fontSize: 20)),
+                          keyboardType: TextInputType.text,
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(left: 20),
+                        child: ElevatedButton(
+                          child: const Text(
+                            'Adicionar',
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          onPressed: () {
+                            print('Cliquei!');
+                            setState(() {
+                              _tasks.add(taskController.text);
+                            });
+                            taskController.clear();
+                          },
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                    itemCount: _tasks.length,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        child: ListTile(
+                          title: Text(_tasks[index]),
+                        ),
+                      );
+                    }),
+              )
+            ],
+          ),
+        ));
   }
 }
