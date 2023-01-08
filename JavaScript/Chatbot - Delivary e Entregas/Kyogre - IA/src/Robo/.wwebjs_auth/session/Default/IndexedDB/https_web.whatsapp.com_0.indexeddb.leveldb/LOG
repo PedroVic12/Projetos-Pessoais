@@ -1,0 +1,14 @@
+2023/01/07-21:21:33.747 dc359 Reusing MANIFEST /home/pedrov/Documentos/GitHub/Jedi_Cyberpunk/The Witcher Mode/Freelancer/Chatbots/Chatbot - Delivary e Entregas/Kyogre - IA/src/Robo/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/01/07-21:21:33.748 dc359 Recovering log #31
+2023/01/07-21:21:33.808 dc359 Reusing old log /home/pedrov/Documentos/GitHub/Jedi_Cyberpunk/The Witcher Mode/Freelancer/Chatbots/Chatbot - Delivary e Entregas/Kyogre - IA/src/Robo/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000031.log 
+2023/01/07-21:26:13.383 dc3b8 Level-0 table #37: started
+2023/01/07-21:26:13.423 dc3b8 Level-0 table #37: 1273612 bytes OK
+2023/01/07-21:26:13.424 dc3b8 Delete type=0 #31
+2023/01/07-21:26:20.045 dc3b0 Compacting 1@1 + 2@2 files
+2023/01/07-21:26:20.159 dc3b0 Generated table #38@1: 30190 keys, 2231287 bytes
+2023/01/07-21:26:20.209 dc3b0 Generated table #39@1: 46417 keys, 1515285 bytes
+2023/01/07-21:26:20.209 dc3b0 Compacted 1@1 + 2@2 files => 3746572 bytes
+2023/01/07-21:26:20.209 dc3b0 compacted to: files[ 0 0 2 0 0 0 0 ]
+2023/01/07-21:26:20.209 dc3b0 Delete type=2 #33
+2023/01/07-21:26:20.209 dc3b0 Delete type=2 #34
+2023/01/07-21:26:20.209 dc3b0 Delete type=2 #37
