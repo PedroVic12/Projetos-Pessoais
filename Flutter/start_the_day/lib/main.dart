@@ -16,12 +16,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-
-  String text = '';
+  
+  String texto = '';
   List<String> lista = [
     "Quantas horas voce estudou?",
     "Fazer 1 Projeto Flutter",
@@ -32,7 +28,28 @@ class _MyAppState extends State<MyApp> {
 
   void showText() {
     setState(() {
-      text = lista[Random().nextInt(lista.length)];
+      texto = lista[Random().nextInt(lista.length)];
     });
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: Text("Voce merece esse APP")
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children:[
+              Text("texto")
+            ]
+          ),
+        ),
+      ),
+    );
+  }
+
+
 }
