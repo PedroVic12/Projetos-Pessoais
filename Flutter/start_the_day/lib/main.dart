@@ -19,11 +19,12 @@ class _MyAppState extends State<MyApp> {
   
   String texto = '';
   List<String> lista = [
-    "Quantas horas voce estudou?",
+    "Arrumar o Portifolio (Gohan Treinamentos)",
     "Fazer 1 Projeto Flutter",
     "Fazer 1 Projeto Arduino",
-    "Projeto Chatbot",
+    "Projeto Chatbot Whatsapp",
     "Projeto App Calistenia",
+    "Projeto C3PO (Assistente)"
   ];
 
   void showText() {
@@ -52,13 +53,23 @@ class _MyAppState extends State<MyApp> {
                   onPrimary: Colors.white, // foreground
                 ),
                 onPressed: showText,
-                child: Text('Gerar Tarefa Aleatória',
+                child: const Text('Gerar Tarefa Aleatória',
                         style: TextStyle(fontSize: 30)),
-              )
+              ),
+
+
+           Container(
+               padding: EdgeInsets.all(10),
+               decoration: BoxDecoration(
+               border: Border.all(color: Colors.red, width: 5)
+               ),
+               child: Text("==> TODO LIST \n\n - Objetivos do dia \n\n -Projetos \n\n - Horas de Pomodoro",
+                 style: TextStyle(fontSize: 30),
+               ) )
             ]
           ),
+          ),
         ),
-      ),
-    );
+      );
   }
 }
