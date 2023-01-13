@@ -43,13 +43,22 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children:[
-              Text("texto")
+              Text(texto,style: TextStyle(color: Colors.blue,
+              fontWeight: FontWeight.bold,
+              fontSize: 40)),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blue, // background
+                  onPrimary: Colors.white, // foreground
+                ),
+                onPressed: showText,
+                child: Text('Gerar Tarefa Aleatória',
+                        style: TextStyle(fontSize: 30)),
+              )
             ]
           ),
         ),
       ),
     );
   }
-
-
 }
