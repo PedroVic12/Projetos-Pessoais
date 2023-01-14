@@ -1,6 +1,6 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
+//import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,8 +23,11 @@ class _MyAppState extends State<MyApp> {
     "Fazer 1 Projeto Flutter",
     "Fazer 1 Projeto Arduino",
     "Projeto Chatbot Whatsapp",
-    "Projeto App Calistenia",
-    "Projeto C3PO (Assistente)"
+    "Projeto C3PO (Assistente)",
+    "Arduino Boson Treinamentos + Automação na Veia",
+    "Aula Dio Innovation (IoT + Inteligencia Artificial)",
+    "Qual a inspiração do dia de hoje? Medite, busque a serenidade e encontre a resposta",
+    "Qual a mensagem pro meu coração e como pode ser util para todos os seres humanos e para todos os seres do planeta Terra? (Pense no bem maior)"
   ];
 
   void showText() {
@@ -38,38 +41,41 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: Text("Voce merece esse APP")
+        appBar: AppBar(title: const Text("Voce merece esse APP")
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children:[
-              Text(texto,style: TextStyle(color: Colors.blue,
-              fontWeight: FontWeight.bold,
-              fontSize: 40)),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.blue, // background
-                  onPrimary: Colors.white, // foreground
-                ),
-                onPressed: showText,
-                child: const Text('Gerar Tarefa Aleatória',
+
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children:[
+
+                  Text(texto,style: const TextStyle(color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 40)),
+
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.blue, // background
+                      onPrimary: Colors.white, // foreground
+                    ),
+                    onPressed: showText,
+                    child: const Text('Gerar Tarefa Aleatória',
                         style: TextStyle(fontSize: 30)),
-              ),
+                  ),
 
-
-           Container(
-               padding: EdgeInsets.all(10),
-               decoration: BoxDecoration(
-               border: Border.all(color: Colors.red, width: 5)
-               ),
-               child: Text("==> TODO LIST \n\n - Objetivos do dia \n\n -Projetos \n\n - Horas de Pomodoro",
-                 style: TextStyle(fontSize: 30),
-               ) )
-            ]
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.red, width: 5)
+                    ),
+                    child: const Text("==> TODO LIST \n\n - Objetivos do dia \n\n -Projetos \n\n - Horas de Pomodoro \n\n https://docs.flutter.dev/cookbook",
+                      style: TextStyle(fontSize: 30),
+                    ), )
+                ]
+            ),
           ),
           ),
-        ),
-      );
+        );
+
   }
 }
