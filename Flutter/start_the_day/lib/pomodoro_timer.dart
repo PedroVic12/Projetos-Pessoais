@@ -1,9 +1,4 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp( PomodoroApp());
-}
 
 class PomodoroApp extends StatefulWidget {
   @override
@@ -50,13 +45,13 @@ class _PomodoroAppState extends State<PomodoroApp> {
             SizedBox(height: 16),
             _isRunning
                 ? RaisedButton(
-              onPressed: () {},
-              child: Text('Stop'),
-            )
+                    onPressed: () {},
+                    child: Text('Stop'),
+                  )
                 : RaisedButton(
-              onPressed: _startTimer,
-              child: Text('Start'),
-            ),
+                    onPressed: _startTimer,
+                    child: Text('Start'),
+                  ),
           ],
         ),
       ),
