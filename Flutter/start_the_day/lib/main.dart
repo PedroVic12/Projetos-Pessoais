@@ -6,6 +6,8 @@ import 'home_page.dart';
 
 // - 3 Telas de Navegação para cada arquivo
 // - Flutter for Dummies
+// - COMANDOS POR VOZ COM UM BOTÃO PARA ELE ME OUVIR E ACIONAR O PYTHON
+// - AudioBook 1 trecho de 1 capitulo  do Clean Code
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +25,31 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String TEXTO = '';
 
+  //Sua proxima tarefa é {}, se responder sim, começa, senão hora da pausa
+
+  // notificação das fases da lua
+
+  // Tela muda a cor de fundo todos os dias, qual o siginificado do dia? ver video xamanismo
+
+  List <String> movimentosCalistenia = [
+    "Muscle Up",
+    "HandStand",
+    "Full Planche",
+    "Pull Over"
+  ];
+
+  List <String> osSeteChakras = [
+    "Chakra Base",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+
+  ];
+
   List<String> superDesenvolvedor = [
     "Habilidades de Resultados Rápidos",
     "Habilidades de Aceleração de Carreira",
@@ -34,21 +61,33 @@ class _MyAppState extends State<MyApp> {
 
   List<String> hormonios = ["Dopamine", "Oxytocin", "Endorphins", "Serotonin"];
 
-  // Musica de elevador para relaxar
+  //
   List<String> momentoChill = [
     "Ver Video no Youtube de como se tornar um dev melhor",
-    "Se alongar, meditar ou treinar"
+    "Se alongar, meditar ou treinar",
+    "Musica de elevador para relaxar"
   ];
 
   // Lofi, rock ou will i am para focar
   List<String> objetivos = [
     "Chatbot Whatsapp",
     "Flutter Todo List + Organização + Flutter For Dummies + Assistente com Voz",
-    "Muscle Up"
+    "Muscle Up",
+    "Manha \n Tem que ser Tarefas Leves para acordar e aquecer os codigos! \n- Flutter",
+    "Tarde \n- Codificar ouvindo musica alta e se divertindo! \n- ChatbotWhatsapp",
+    "Noite \n- Seja criativo, inove e faça a diferença! \n- Faça o que voce quiser!",
+  ];
+
+  List <String> orientacao_objetos = [
+    "Encapsulamento",
+    "Imutabilidade",
+    "Herança",
+    "Polimorfismo"
   ];
 
   List<String> lista = [
-    "Arrumar o Portifolio (Gohan Treinamentos)",
+
+    "Arrumar o Portifolio (Gohan Treinamentos) ",
     "Fazer 1 Projeto Flutter",
     "Fazer 1 Projeto Arduino",
     "Projeto Chatbot Whatsapp",
@@ -104,6 +143,7 @@ class _MyAppState extends State<MyApp> {
                         ),
                         const Text("Seja Criativo como o Steve Jobs"),
                         const Text("Seja Determinado como o Bill Gates"),
+                        const Text("\n90 Minutos DEEP FOCUS + 30 Minutos REST\n"),
                         InkWell(
                           child: const Text("Link para o Google"),
                           onTap: () {
