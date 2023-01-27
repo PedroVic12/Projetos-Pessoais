@@ -20,12 +20,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("GOHAN TREINAMENTOS"),
+        title: Text("Example App"),
       ),
       body: Column(
         children: [
           InkWell(
-            child: Text("iR PARA O GOOGLE"),
+            child: Text("Link"),
             onTap: () async {
               final url = 'https://www.google.com';
               if (await canLaunch(url)) {
@@ -35,7 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
               }
             },
           ),
-          Text('OLA MUNDO'),
           YoutubePlayer(
             controller: _controller,
             showVideoProgressIndicator: true,
