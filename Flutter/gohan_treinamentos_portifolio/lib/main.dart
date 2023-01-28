@@ -1,48 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class MyHomePage extends StatefulWidget {
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyVideoPlayer(),
+    );
+  }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  final YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'iLnmTe5Q2Qw',
-    flags: YoutubePlayerFlags(
-      autoPlay: true,
-      mute: false,
-    ),
-  );
+class MyVideoPlayer extends StatefulWidget {
+  @override
+  _MyVideoPlayerState createState() => _MyVideoPlayerState();
+}
+
+class _MyVideoPlayerState extends State<MyVideoPlayer> {
+  late YoutubePlayerController _controller;
+
+  @override
+  void initState() {
+    _controller = YoutubePlayerController(
+      initialVideoId: 'iLnmTe5Q2Qw',
+      flags: YoutubePlayerFlags(
+          //colocar as flags aqui
+          ),
+    );
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Example App"),
-      ),
-      body: Column(
-        children: [
-          InkWell(
-            child: Text("Link"),
-            onTap: () async {
-              final url = 'https://www.google.com';
-              if (await canLaunch(url)) {
-                await launch(url);
-              } else {
-                throw 'Could not launch $url';
-              }
-            },
-          ),
-          YoutubePlayer(
-            controller: _controller,
-            showVideoProgressIndicator: true,
-            onReady: () {
-              print('Player is ready.');
-            },
-          ),
-        ],
+      body: YoutubePlayer(
+        controller: _controller,
+        //adicionar outros parametros aqui
       ),
     );
   }
